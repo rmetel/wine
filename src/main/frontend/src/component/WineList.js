@@ -7,7 +7,7 @@ import {
   Badge
 } from "react-bootstrap";
 
-class Nav extends React.Component {
+class WineList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {wines: []};
@@ -18,6 +18,7 @@ class Nav extends React.Component {
       .then(response => response.json())
       .then(data => this.setState({wines: data}));
   }
+
   render() {
     const {wines} = this.state;
     return (
@@ -46,4 +47,4 @@ class Nav extends React.Component {
   }
 }
 
-export default Nav;
+export default WineList;
