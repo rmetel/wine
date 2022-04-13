@@ -1,5 +1,7 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
 .App {
-  text-align: center;
+  /*text-align: center;*/
 }
 
 .App-logo {
@@ -42,4 +44,8 @@
   position: absolute;
   right: 10px;
   top: 10px;
+}
+
+.rightBox {
+  background: #eef3ef;
 }

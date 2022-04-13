@@ -1,10 +1,8 @@
 import React from "react";
 
 import {
-  Card,
   Container,
-  Button,
-  Badge
+  Button
 } from "react-bootstrap";
 
 class Cart extends React.Component {

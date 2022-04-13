@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/wine")
@@ -27,5 +28,10 @@ public class WineController {
     @GetMapping("/all")
     public List<Wine> getAllWines(){
         return wineService.getAllWines();
+    }
+
+    @GetMapping("/{id}")
+    public Optional<Wine> getWineById(@PathVariable String id){
+        return wineService.getWineById(Integer.parseInt(id));
     }
 }

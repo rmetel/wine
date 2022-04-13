@@ -32,7 +32,7 @@ class WineList extends React.Component {
                 <Card>
                   <Badge bg="secondary">{wine.year}</Badge>
                   <Link to={`/wine/${wine.id}`}><Card.Img variant="top" src="coto_de_imaz.jpeg" /></Link>
-                  <Card.Body>
+                  <Card.Body className="text-center">
                     <Card.Title>{wine.name}</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">{wine.grape}</Card.Subtitle>
                     <Card.Text>

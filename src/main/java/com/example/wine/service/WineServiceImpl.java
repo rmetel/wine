@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class WineServiceImpl implements WineService {
@@ -20,5 +21,10 @@ public class WineServiceImpl implements WineService {
     @Override
     public List<Wine> getAllWines() {
         return wineRepository.findAll();
+    }
+
+    @Override
+    public Optional<Wine> getWineById(int id) {
+        return wineRepository.findById(id);
     }
 }
