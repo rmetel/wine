@@ -55,7 +55,7 @@ class WineDetails extends React.Component {
                             </div>
                             <h5 className="">Weinbeschreibung</h5>
                             <p className="about">
-                              Der tief granatrote Wein bietet alles, was man von einem {wine.region} erwartet.
+                              Der tief granatrote Wein bietet alles, was man von einem {wine.region} Wein erwartet.
                               Zu der intensiven Frucht von roten und schwarzen Früchten gesellen sich Noten von Wachs,
                               Tabak, Leder und Kirschen in Likör, eine rauchige Würze, Süßholz und Pfeffer.
                             </p>
