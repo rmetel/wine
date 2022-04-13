@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import {
   Navbar,
@@ -11,9 +12,8 @@ class Nav extends React.Component {
       <>
         <Navbar bg="dark" variant="dark">
           <Container>
-            <Navbar.Brand href="#home">
-              WINE
-            </Navbar.Brand>
+            <Navbar.Brand href="/">WINE</Navbar.Brand>
+            <NavLink className="nav-link text-white" to="/cart">Warenkorb</NavLink>
           </Container>
         </Navbar>
       </>
