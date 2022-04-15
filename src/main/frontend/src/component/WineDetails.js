@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink, useParams } from "react-router-dom";
 
 import {
-  Button,
   Container,
 } from "react-bootstrap";
 
@@ -20,7 +19,7 @@ class WineDetails extends React.Component {
   }
 
   componentDidMount() {
-    let isLocal = window.location.href.indexOf("localhost") != -1;
+    let isLocal = window.location.href.indexOf("localhost") > -1;
     let urlLocal = "http://localhost:8080";
     let endPoint = "/wine/" + this.props.wineId;
 
@@ -44,7 +43,7 @@ class WineDetails extends React.Component {
                   <div className="col-md-6">
                     <div className="images p-3">
                       <div className="text-center p-4">
-                        <img id="main-image" src="/coto_de_imaz.jpeg" width="250" />
+                        <img id="main-image" src="/coto_de_imaz.jpeg" width="250" alt="wine bottle" />
                       </div>
                     </div>
                   </div>
