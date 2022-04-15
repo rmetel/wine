@@ -16,7 +16,11 @@ class WineList extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:8080/wine/all')
+    let urlProd = "http://wine-env.eba-qpx2jqe7.eu-central-1.elasticbeanstalk.com";
+    let urlLocal = "http://localhost:8080";
+    let endPoint = "/wine/all";
+
+    fetch(urlProd + endPoint)
       .then(response => response.json())
       .then(data => this.setState({wines: data}));
   }
