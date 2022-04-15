@@ -3,10 +3,7 @@ package com.example.wine.model;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -22,4 +19,7 @@ public class Wine {
     private String grape;
     private int year;
     private double price;
+    @ManyToOne()
+    @JoinColumn(name="category_id", referencedColumnName = "id", insertable = false, updatable = false)
+    private Category category;
 }

@@ -27,4 +27,14 @@ public class WineServiceImpl implements WineService {
     public Optional<Wine> getWineById(int id) {
         return wineRepository.findById(id);
     }
+
+    @Override
+    public List<Wine> findByCategoryId(int id) {
+        return null;
+    }
+
+    @Override
+    public List<Wine> getAllWhiteWines() {
+        return null;
+    }
 }

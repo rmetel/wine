@@ -9,4 +9,6 @@ public interface WineService {
     Wine addWine(Wine wine);
     List<Wine> getAllWines();
     Optional<Wine> getWineById(int id);
+    List<Wine> findByCategoryId(int categoryId);
+    List<Wine> getAllWhiteWines();
 }
