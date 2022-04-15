@@ -22,7 +22,11 @@ class WineDetails extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:8080/wine/' + this.props.wineId)
+    let isLocal = window.location.href.indexOf("localhost") != -1;
+    let urlLocal = "http://localhost:8080";
+    let endPoint = "/wine/" + this.props.wineId;
+
+    fetch(isLocal? urlLocal + endPoint : endPoint)
       .then(response => response.json())
       .then(data => this.setState({wine: data}));
   }
