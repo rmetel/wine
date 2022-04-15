@@ -1,4 +1,5 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 
 .App {
   /*text-align: center;*/
@@ -39,6 +40,14 @@
   }
 }
 
+.wineDetails .card {
+  background: #eef3ef !important;
+}
+
+.card .images {
+  background: #fff;
+}
+
 .card .badge {
   width: 50px;
   position: absolute;
@@ -46,6 +55,17 @@
   top: 10px;
 }
 
-.rightBox {
-  background: #eef3ef;
+.bi-cart3 {
+  font-size: 20px;
 }
+
+.cart {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .cart {
+    text-align: inherit;
+  }
+}
+

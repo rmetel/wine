@@ -16,8 +16,7 @@ class WineList extends React.Component {
   }
 
   componentDidMount() {
-    let isLocal = window.location.href.indexOf("localhost") != -1;
-    let urlProd = "http://wine-env.eba-qpx2jqe7.eu-central-1.elasticbeanstalk.com";
+    let isLocal = window.location.href.indexOf("localhost") > -1;
     let urlLocal = "http://localhost:8080";
     let endPoint = "/wine/all";
 

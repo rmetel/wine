@@ -3,7 +3,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import Nav from './component/NavBar';
+import Navi from './component/Navi';
 import WineList from './component/WineList';
 import GetWineById from './component/WineDetails';
 import Cart from './component/Cart';
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Nav/>
+        <Navi/>
         <Routes>
           <Route path="/" element={<WineList/>}/>
           <Route path="/cart" element={<Cart/>}/>
