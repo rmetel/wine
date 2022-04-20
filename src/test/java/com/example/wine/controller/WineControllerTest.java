@@ -11,6 +11,8 @@ import java.util.function.BooleanSupplier;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class WineControllerTest {
+    private WineServiceImpl wineService;
+
     @Test
     @Disabled
     void addWine() {
@@ -32,6 +34,4 @@ class WineControllerTest {
 
         assertTrue((BooleanSupplier) wineService.addWine(wine));
     }
-
-    private WineServiceImpl wineService;
 }
