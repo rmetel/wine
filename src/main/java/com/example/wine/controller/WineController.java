@@ -31,16 +31,6 @@ public class WineController {
         return wineService.getAllWines();
     }
 
-    @GetMapping("/red")
-    public List<Wine> getAllRedWines(){
-        return wineService.findByCategoryId(Category.RED.getCategoryId());
-    }
-
-    @GetMapping("/white")
-    public List<Wine> getAllWhiteWines(){
-        return wineService.findByCategoryId(Category.WHITE.getCategoryId());
-    }
-
     @GetMapping("/{id}")
     public Optional<Wine> getWineById(@PathVariable String id){
         return wineService.getWineById(Integer.parseInt(id));

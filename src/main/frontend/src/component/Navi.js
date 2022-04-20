@@ -16,8 +16,8 @@ class Navi extends React.Component {
             <Navbar.Brand href="/">WINE</Navbar.Brand>
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="/wine/red">Rotweine</Nav.Link>
-                <Nav.Link href="/wine/white">Weißweine</Nav.Link>
+                <Nav.Link href="/category/red">Rotweine</Nav.Link>
+                <Nav.Link href="/category/white">Weißweine</Nav.Link>
               </Nav>
             </Navbar.Collapse>
             <NavLink className="nav-link text-white" to="/cart"><i className="bi-cart3 text-white"></i></NavLink>

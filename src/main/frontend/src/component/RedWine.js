@@ -18,7 +18,7 @@ class RedWine extends React.Component {
   componentDidMount() {
     let isLocal = window.location.href.indexOf("localhost") > -1;
     let urlLocal = "http://localhost:8080";
-    let endPoint = "/wine/red";
+    let endPoint = "/category/red";
 
     fetch(isLocal? urlLocal + endPoint : endPoint)
       .then(response => response.json())

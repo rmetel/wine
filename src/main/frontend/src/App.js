@@ -20,8 +20,8 @@ function App() {
           <Route path="/" element={<WineList/>}/>
           <Route path="/cart" element={<Cart/>}/>
           <Route path="/wine/:wineId" element={<GetWineById/>} />
-          <Route path="/wine/red" element={<RedWine/>} />
-          <Route path="/wine/white" element={<WhiteWine/>} />
+          <Route path="/category/red" element={<RedWine/>} />
+          <Route path="/category/white" element={<WhiteWine/>} />
         </Routes>
       </Router>
     </div>
