@@ -5,6 +5,7 @@ import com.example.wine.repository.WineRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -30,11 +31,6 @@ public class WineServiceImpl implements WineService {
 
     @Override
     public List<Wine> findByCategoryId(int id) {
-        return null;
-    }
-
-    @Override
-    public List<Wine> getAllWhiteWines() {
-        return null;
+        return wineRepository.findByCategoryId(id);
     }
 }

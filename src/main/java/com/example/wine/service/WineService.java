@@ -10,5 +10,4 @@ public interface WineService {
     List<Wine> getAllWines();
     Optional<Wine> getWineById(int id);
     List<Wine> findByCategoryId(int categoryId);
-    List<Wine> getAllWhiteWines();
 }

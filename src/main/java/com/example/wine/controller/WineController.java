@@ -2,6 +2,7 @@ package com.example.wine.controller;
 
 import com.example.wine.model.Wine;
 import com.example.wine.service.WineService;
+import com.example.wine.util.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,12 +33,12 @@ public class WineController {
 
     @GetMapping("/red")
     public List<Wine> getAllRedWines(){
-        return wineService.findByCategoryId(1);
+        return wineService.findByCategoryId(Category.RED.getCategoryId());
     }
 
     @GetMapping("/white")
     public List<Wine> getAllWhiteWines(){
-        return wineService.getAllWhiteWines();
+        return wineService.findByCategoryId(Category.WHITE.getCategoryId());
     }
 
     @GetMapping("/{id}")
