@@ -33,7 +33,15 @@ class WineList extends React.Component {
     const {countries} = this.state;
     return (
       <>
-        <Container className="mt-5">
+        <div className="stage w-100">
+          <img src="/oak-barrels.png" className="w-100" alt="red"/>
+        </div>
+        <Container className="mt-4">
+          <div className="col-12">
+            <div className="category">
+              <h2 className="category">WINE&trade;</h2>
+            </div>
+          </div>
           <Alert variant="success" className="d-none"></Alert>
           <div className="row">
             <div className="col-12 col-sm-12 mb-4 d-flex flex-row-reverse">

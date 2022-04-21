@@ -1,12 +1,8 @@
 import React from "react";
 import Wine from './Wine';
-import { Link } from "react-router-dom";
 
 import {
-  Card,
-  Container,
-  Button,
-  Badge
+  Container
 } from "react-bootstrap";
 
 class WhiteWine extends React.Component {
@@ -29,8 +25,16 @@ class WhiteWine extends React.Component {
     const {wines} = this.state;
     return (
       <>
-        <Container className="mt-5">
+        <div className="stage w-100">
+          <img src="/white-grapes.png" className="w-100" alt="red"/>
+        </div>
+        <Container className="mt-4">
           <div className="row">
+            <div className="col-12">
+              <div className="category">
+                <h2>Weißweine</h2>
+              </div>
+            </div>
             {wines.map(wine =>
               <div className="col-12 col-sm-3 mb-2" key={wine.id}>
                 <Wine wine={wine} />

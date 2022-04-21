@@ -2,7 +2,7 @@ import React from "react";
 import Wine from './Wine';
 
 import {
-  Container,
+  Container
 } from "react-bootstrap";
 
 class RedWine extends React.Component {
@@ -25,8 +25,16 @@ class RedWine extends React.Component {
     const {wines} = this.state;
     return (
       <>
-        <Container className="mt-5">
+        <div className="stage w-100">
+          <img src="/red-grapes.png" className="w-100" alt="red"/>
+        </div>
+        <Container className="mt-4">
           <div className="row">
+            <div className="col-12">
+              <div className="category">
+                <h2 className="category">Rotweine</h2>
+              </div>
+            </div>
             {wines.map(wine =>
               <div className="col-12 col-sm-3 mb-2" key={wine.id}>
                 <Wine wine={wine} />

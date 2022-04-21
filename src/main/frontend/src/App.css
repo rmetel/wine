@@ -55,9 +55,6 @@
   right: 10px;
 }
 
-.card .badge.bg-secondary {
-}
-
 .card .badge.bg-danger,
 .card .badge.bg-warning {
   top: 35px;
@@ -75,6 +72,12 @@
   .cart {
     text-align: inherit;
   }
+  .stage {
+    height: 400px !important;
+  }
+  .category h2 {
+    top: 255px !important;
+  }
 }
 
 .alert[role=alert] {
@@ -84,3 +87,18 @@
   right: 15px;
 }
 
+.stage {
+  height: 100px;
+  overflow-y: hidden;
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+}
+
+.category h2 {
+  position: absolute;
+  top: 95px;
+  color: white;
+}
