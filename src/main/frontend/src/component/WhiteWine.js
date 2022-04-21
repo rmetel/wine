@@ -1,5 +1,5 @@
 import React from "react";
-//import reactStringReplace from 'react-string-replace';
+import Wine from './Wine';
 import { Link } from "react-router-dom";
 
 import {
@@ -33,19 +33,7 @@ class WhiteWine extends React.Component {
           <div className="row">
             {wines.map(wine =>
               <div className="col-12 col-sm-3 mb-2" key={wine.id}>
-                <Card>
-                  <Badge bg="secondary">{wine.year}</Badge>
-                  <Link to={`/wine/${wine.id}`}><Card.Img variant="top" src="/coto_de_imaz.jpeg" /></Link>
-                  <Card.Body className="text-center">
-                    <Card.Title>{wine.name}</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">{wine.grape}</Card.Subtitle>
-                    <Card.Text>
-                      {wine.region}, {wine.country}
-                    </Card.Text>
-                    <Card.Text className="mt-2">{wine.price} €</Card.Text>
-                    <Button variant="outline-dark">Hinzufügen</Button>
-                  </Card.Body>
-                </Card>
+                <Wine wine={wine} />
               </div>
             )}
           </div>
