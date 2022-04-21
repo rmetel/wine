@@ -2,7 +2,6 @@ package com.example.wine.controller;
 
 import com.example.wine.model.Wine;
 import com.example.wine.service.WineService;
-import com.example.wine.util.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
