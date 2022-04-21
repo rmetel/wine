@@ -53,18 +53,19 @@ class WineList extends React.Component {
               <div className="col-12 col-sm-3 mb-2" key={wine.id}>
                 <Card>
                   <Badge bg="secondary">{wine.year}</Badge>
+                  <Badge bg={wine.category.id === 1 ? "danger" : "warning"}>{wine.category.name}</Badge>
                   <Link to={`/wine/${wine.id}`}><Card.Img variant="top" src="coto_de_imaz.jpeg" /></Link>
                   <Card.Body className="text-center">
                     <Card.Title>{wine.name}</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">{wine.grape}</Card.Subtitle>
                     <Card.Text>
-                      {wine.region}, {wine.country}
+                      {wine.region.name} / {wine.country.name}
                     </Card.Text>
                     <Card.Text className="mt-2">{wine.price} €</Card.Text>
                     <div className="row">
                       <div className="col-12 col-sm-12 col-xl-4 mb-2 mb-xs-0 mb-sm-2 md-xl-0">
-                        <Form.Select aria-label="Default select example">
-                          <option value="1" selected>1</option>
+                        <Form.Select aria-label="Menge" defaultValue={'1'}>
+                          <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
                           <option value="4">4</option>

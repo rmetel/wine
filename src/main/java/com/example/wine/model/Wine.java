@@ -1,27 +1,34 @@
 package com.example.wine.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 public class Wine {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    private String country;
-    private String region;
     private String grape;
     private int year;
     private double price;
+    private int amount;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="category_id", foreignKey = @ForeignKey(name = "none", value = ConstraintMode.NO_CONSTRAINT))
-    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="category_id")
     private Category category;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="country_id")
+    private Country country;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="region_id")
+    private Region region;
 }

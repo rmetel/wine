@@ -24,7 +24,7 @@ class Cart extends React.Component {
         <Container className="mt-5">
           <div className="row">
             <div className="col-12 col-sm-3">
-              Cart
+              {wines.length === 0 ? "empty" : "full"}
             </div>
           </div>
         </Container>

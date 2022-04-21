@@ -51,8 +51,16 @@
 .card .badge {
   width: 50px;
   position: absolute;
-  right: 10px;
   top: 10px;
+  right: 10px;
+}
+
+.card .badge.bg-secondary {
+}
+
+.card .badge.bg-danger,
+.card .badge.bg-warning {
+  top: 35px;
 }
 
 .bi-cart3 {

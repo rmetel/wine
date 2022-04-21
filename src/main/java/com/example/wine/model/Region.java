@@ -17,7 +17,11 @@ public class Region {
     private String name;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="country_id", foreignKey = @ForeignKey(name = "none", value = ConstraintMode.NO_CONSTRAINT))
+    @JoinColumn(name="country_id")
     @JsonIgnore
     private Country country;
+
+    @OneToMany(mappedBy = "region", fetch = FetchType.LAZY)
+    @JsonIgnore
+    List<Wine> wines;
 }
