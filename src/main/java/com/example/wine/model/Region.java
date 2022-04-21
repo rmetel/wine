@@ -10,13 +10,14 @@ import java.util.List;
 @Entity
 @Data
 @NoArgsConstructor
-public class Category {
+public class Region {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer id;
     private String name;
 
-    @OneToMany(mappedBy = "category", fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="country_id", foreignKey = @ForeignKey(name = "none", value = ConstraintMode.NO_CONSTRAINT))
     @JsonIgnore
-    List<Wine> wines;
+    private Country country;
 }
