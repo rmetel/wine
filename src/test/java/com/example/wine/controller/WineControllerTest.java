@@ -26,8 +26,6 @@ class WineControllerTest {
         wine.setId(1000);
         wine.setName("Arzuaga");
         wine.setCategory(category);
-        wine.setCountry("Spanien");
-        wine.setRegion("Riberad Del Duero");
         wine.setGrape("Tempranillo");
         wine.setYear(2018);
         wine.setPrice(22.99);
