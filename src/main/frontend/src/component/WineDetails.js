@@ -35,7 +35,7 @@ class WineDetails extends React.Component {
         <Container className="mt-5 wineDetails">
           <div className="row d-flex justify-content-center">
             <div className="col-md-10 mb-3">
-              <NavLink to="/" className="text-dark"><i class="bi-arrow-left"></i>&nbsp;Zurück</NavLink>
+              <NavLink to="/" className="text-dark"><i className="bi-arrow-left"></i>&nbsp;Zurück</NavLink>
             </div>
             <div className="col-md-10">
               <div className="card mb-4">
