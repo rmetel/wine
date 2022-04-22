@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  Alert,
   Badge,
   Button,
   Card,
@@ -38,7 +37,7 @@ class Wine extends React.Component {
                   </Form.Select>
                 </div>
                 <div className="col-12 col-sm-12 col-xl-8 mb-2 mb-xs-0 mb-sm-2 md-xl-0">
-                  <Button variant="outline-dark" className="w-100" onClick={() => { this.addToCart(wine) } }>Hinzufügen</Button>
+                  <Button variant="outline-dark" className="w-100" onClick={() => { this.addToCart(wine) }}>Hinzufügen</Button>
                 </div>
               </div>
             </Card.Body>

@@ -1,9 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import {
-  Container,
-  Button
-} from "react-bootstrap";
 
 class MiniCart extends React.Component {
   constructor(props) {

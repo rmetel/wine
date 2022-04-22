@@ -37,7 +37,6 @@ public class CartController {
 
                 if(cart.isPresent() && wine.isPresent()) {
                     CartItem cartItem = new CartItem();
-                    cartItem.setUser(user.get());
                     cartItem.setCart(cart.get());
                     cartItem.setWine(wine.get());
                     cartItem.setAmount(cartItemDTO.getAmount());
@@ -57,7 +56,7 @@ public class CartController {
         return cartItemService.getAllCartItems();
     }
 
-    @DeleteMapping("/delete/{id}")
+    @GetMapping("/delete/{id}")
     public boolean deleteCartItemById(@PathVariable String id){
         return cartItemService.deleteCartItem(Integer.parseInt(id));
     }
