@@ -36,8 +36,7 @@ public class CartItem {
     @JsonIgnore
     private Cart cart;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="wine_id")
-    @JsonIgnore
     private Wine wine;
 }

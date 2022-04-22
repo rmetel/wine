@@ -40,6 +40,7 @@ public class CartController {
                     cartItem.setUser(user.get());
                     cartItem.setCart(cart.get());
                     cartItem.setWine(wine.get());
+                    cartItem.setAmount(cartItemDTO.getAmount());
                     cartItemService.addCartItem(cartItem);
                 }
             } else {

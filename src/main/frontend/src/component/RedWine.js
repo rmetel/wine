@@ -2,6 +2,7 @@ import React from "react";
 import Wine from './Wine';
 
 import {
+  Alert,
   Container
 } from "react-bootstrap";
 
@@ -29,6 +30,7 @@ class RedWine extends React.Component {
           <img src="/red-grapes.png" className="w-100" alt="red"/>
         </div>
         <Container className="mt-4">
+          <Alert variant="success" className="d-none"></Alert>
           <div className="row">
             <div className="col-12">
               <div className="category">
@@ -36,9 +38,7 @@ class RedWine extends React.Component {
               </div>
             </div>
             {wines.map(wine =>
-              <div className="col-12 col-sm-3 mb-2" key={wine.id}>
-                <Wine wine={wine} />
-              </div>
+              <Wine wine={wine} key={wine.id} />
             )}
           </div>
         </Container>

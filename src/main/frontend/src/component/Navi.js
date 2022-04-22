@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
+import MiniCart from './MiniCart';
 import {
   Navbar,
   Nav,
@@ -8,6 +8,10 @@ import {
 } from "react-bootstrap";
 
 class Navi extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <>
@@ -20,7 +24,7 @@ class Navi extends React.Component {
                 <NavLink className="nav-link text-white" to="/category/white">Weißweine</NavLink>
               </Nav>
             </Navbar.Collapse>
-            <NavLink className="nav-link text-white" to="/cart"><i className="bi-cart3 text-white"></i></NavLink>
+            <MiniCart />
           </Container>
         </Navbar>
       </>

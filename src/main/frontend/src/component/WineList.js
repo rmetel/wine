@@ -37,10 +37,8 @@ class WineList extends React.Component {
           <img src="/oak-barrels.png" className="w-100" alt="red"/>
         </div>
         <Container className="mt-4">
-          <div className="col-12">
-            <div className="category">
-              <h2 className="category">WINE&trade;</h2>
-            </div>
+          <div className="category">
+            <h2 className="category">WINE&trade;</h2>
           </div>
           <Alert variant="success" className="d-none"></Alert>
           <div className="row">
@@ -54,9 +52,7 @@ class WineList extends React.Component {
             </div>
 
             {wines.map(wine =>
-              <div className="col-12 col-sm-3 mb-2" key={wine.id}>
-                <Wine wine={wine} />
-              </div>
+              <Wine wine={wine} key={wine.id} />
             )}
           </div>
         </Container>

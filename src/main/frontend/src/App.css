@@ -102,3 +102,7 @@
   top: 95px;
   color: white;
 }
+
+.list-group img {
+  width: 60px;
+}
