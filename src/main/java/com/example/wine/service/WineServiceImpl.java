@@ -24,7 +24,7 @@ public class WineServiceImpl implements WineService {
     }
 
     @Override
-    public Optional<Wine> getWineById(int id) {
+    public Optional<Wine> findById(int id) {
         return wineRepository.findById(id);
     }
 
@@ -32,4 +32,5 @@ public class WineServiceImpl implements WineService {
     public List<Wine> findByCategoryId(int id) {
         return wineRepository.findByCategoryId(id);
     }
+
 }

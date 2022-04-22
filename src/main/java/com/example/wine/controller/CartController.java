@@ -1,8 +1,9 @@
 package com.example.wine.controller;
 
-import com.example.wine.model.Cart;
-import com.example.wine.model.Wine;
+import com.example.wine.model.*;
+import com.example.wine.service.CartItemService;
 import com.example.wine.service.CartService;
+import com.example.wine.service.UserService;
 import com.example.wine.service.WineService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,11 +17,34 @@ import java.util.Optional;
 public class CartController {
     @Autowired
     private CartService cartService;
+    @Autowired
+    private CartItemService cartItemService;
+
+    @Autowired
+    private UserService userService;
+
+    @Autowired
+    WineService wineService;
 
     @PostMapping("/add")
-    public boolean addCart(@RequestBody Cart cart) {
+    public boolean addToCart(@RequestBody CartItemDTO cartItemDTO) {
         try {
-            cartService.addCart(cart);
+            Optional<User> user = userService.findById(1); // userId hardcoded due to single user demo application
+
+            if(user.isPresent()) {
+                Optional<Cart> cart = cartService.findByUserId(user.get().getId());
+                Optional<Wine> wine = wineService.findById(cartItemDTO.getWineId());
+
+                if(cart.isPresent() && wine.isPresent()) {
+                    CartItem cartItem = new CartItem();
+                    cartItem.setUser(user.get());
+                    cartItem.setCart(cart.get());
+                    cartItem.setWine(wine.get());
+                    cartItemService.addCartItem(cartItem);
+                }
+            } else {
+                throw new Exception("missing data");
+            }
         } catch (Exception e) {
             return false;
         }
@@ -28,12 +52,12 @@ public class CartController {
     }
 
     @GetMapping("/all")
-    public List<Cart> getAllWines(){
-        return cartService.getAllCarts();
+    public List<CartItem> getAllCartItems(){
+        return cartItemService.getAllCartItems();
     }
 
     @DeleteMapping("/delete/{id}")
-    public List<Cart> getWineById(@PathVariable String id){
-        return cartService.getCartById(Integer.parseInt(id));
+    public boolean deleteCartItemById(@PathVariable String id){
+        return cartItemService.deleteCartItem(Integer.parseInt(id));
     }
 }

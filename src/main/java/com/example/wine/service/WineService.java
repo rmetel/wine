@@ -8,6 +8,6 @@ import java.util.Optional;
 public interface WineService {
     Wine addWine(Wine wine);
     List<Wine> getAllWines();
-    Optional<Wine> getWineById(int id);
+    Optional<Wine> findById(int id);
     List<Wine> findByCategoryId(int categoryId);
 }

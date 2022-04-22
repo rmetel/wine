@@ -32,6 +32,6 @@ public class WineController {
 
     @GetMapping("/{id}")
     public Optional<Wine> getWineById(@PathVariable String id){
-        return wineService.getWineById(Integer.parseInt(id));
+        return wineService.findById(Integer.parseInt(id));
     }
 }
