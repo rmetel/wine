@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import Navi from './component/Navi';
 import WineList from './component/WineList';
-import GetWineById from './component/WineDetails';
+import WineDetails from './component/WineDetails';
 import RedWine from './component/RedWine';
 import WhiteWine from './component/WhiteWine';
 import Cart from './component/Cart';
@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<WineList/>}/>
           <Route path="/cart" element={<Cart/>}/>
-          <Route path="/wine/:wineId" element={<GetWineById/>} />
+          <Route path="/wine/:wineId" element={<WineDetails/>} />
           <Route path="/category/red" element={<RedWine/>} />
           <Route path="/category/white" element={<WhiteWine/>} />
         </Routes>
