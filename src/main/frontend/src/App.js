@@ -103,8 +103,8 @@ class App extends React.Component {
             <Route path="/" element={<WineList addToCart={this.addToCart} />}/>
             <Route path="/cart" element={<Cart cartItems={cartItems} deleteFromCart={this.deleteFromCart} />}/>
             <Route path="/wine/:wineId" element={<WineDetails/>} />
-            <Route path="/category/red" element={<RedWine/>} />
-            <Route path="/category/white" element={<WhiteWine/>} />
+            <Route path="/category/red" element={<RedWine addToCart={this.addToCart} />} />
+            <Route path="/category/white" element={<WhiteWine addToCart={this.addToCart} />} />
           </Routes>
         </Router>
       </div>
