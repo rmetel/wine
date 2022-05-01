@@ -52,7 +52,7 @@ class WineList extends React.Component {
             </div>
 
             {wines.map(wine =>
-              <Wine wine={wine} key={wine.id} />
+              <Wine wine={wine} key={wine.id} addToCart={this.props.addToCart} />
             )}
           </div>
         </Container>

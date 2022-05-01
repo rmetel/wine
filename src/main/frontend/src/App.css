@@ -40,6 +40,10 @@
   }
 }
 
+body {
+  padding-top: 62px;
+}
+
 .wineDetails .card {
   background: #eef3ef !important;
 }

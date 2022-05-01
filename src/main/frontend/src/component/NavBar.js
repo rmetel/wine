@@ -1,17 +1,21 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import MiniCart from './MiniCart';
 import {
   Navbar,
   Nav,
   Container
 } from "react-bootstrap";
 
-class Navi extends React.Component {
+class NavBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {cartItems: []};
+  }
+
   render() {
     return (
       <>
-        <Navbar bg="dark" variant="dark">
+        <Navbar bg="dark" variant="dark" className="fixed-top">
           <Container>
             <Navbar.Brand href="/">WINE</Navbar.Brand>
             <Navbar.Collapse id="responsive-navbar-nav">
@@ -20,7 +24,7 @@ class Navi extends React.Component {
                 <NavLink className="nav-link text-white" to="/category/white">Weißweine</NavLink>
               </Nav>
             </Navbar.Collapse>
-            <MiniCart />
+            <NavLink className="nav-link text-white" to="/cart"><i className="bi-cart3 text-white"></i>&nbsp;({this.props.countItems})</NavLink>
           </Container>
         </Navbar>
       </>
@@ -28,4 +32,4 @@ class Navi extends React.Component {
   }
 }
 
-export default Navi;
+export default NavBar;

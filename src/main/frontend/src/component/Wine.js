@@ -37,7 +37,7 @@ class Wine extends React.Component {
                   </Form.Select>
                 </div>
                 <div className="col-12 col-sm-12 col-xl-8 mb-2 mb-xs-0 mb-sm-2 md-xl-0">
-                  <Button variant="outline-dark" className="w-100" onClick={() => { this.addToCart(wine) }}>Hinzufügen</Button>
+                  <Button variant="outline-dark" className="w-100" onClick={() => { this.props.addToCart(wine) }}>Hinzufügen</Button>
                 </div>
               </div>
             </Card.Body>
@@ -45,34 +45,6 @@ class Wine extends React.Component {
         </div>
       </>
     );
-  }
-
-  addToCart(wine) {
-    let isLocal = window.location.href.indexOf("localhost") > -1;
-    let urlLocal = "http://localhost:8080";
-    let endPoint = "/cart/add";
-    const axios = require('axios');
-
-    var alertBox = document.querySelector("[role=alert]");
-
-    let params = {
-      wineId: `${wine.id}`,
-      amount: document.getElementById(`select-amount-${wine.id}`).selectedOptions[0].value
-    };
-
-    axios.post(isLocal? urlLocal + endPoint : endPoint, params)
-      .then(function (response) {
-        if(response.status === 200) {
-          alertBox.innerHTML = `${wine.name} ${wine.year} wurde in den Warenkorb gelegt!`;
-          alertBox.classList.remove("d-none");
-          window.setTimeout(function() {
-            alertBox.classList.add("d-none");
-          }, 2000);
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
   }
 }
 
