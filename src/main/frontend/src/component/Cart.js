@@ -23,10 +23,10 @@ class Cart extends React.Component {
                 {this.props.cartItems.map(cartItem =>
                   <li key={cartItem.id} className="list-group-item">
                     <div className="row">
-                      <div className="col-6 col-md-1">
+                      <div className="col-12 col-md-1">
                         <img src="/thumbnail.png" alt="thumbnail" />
                       </div>
-                      <div className="col-6 col-11">
+                      <div className="col-12 col-11">
                         <div className="row">
                           <div className="col-12 col-md-3 py-sm-4">{cartItem.wine.name} {cartItem.wine.year}</div>
                           <div className="col-12 col-md-3 py-sm-4">{cartItem.wine.grape}</div>
